@@ -1,5 +1,7 @@
 const expressErrorHander = require('express-async-handler')
 const userModel = require('../models/userModel')
+const encrypt = require('bcrypt')
+// ----------------------------------------------------------------Resgister User function---------------------------------------
 const Registeruser =expressErrorHander(async (req, res) =>
 {
     const { myName, myPhoneno, myEmail, myPassword,myGender,myImage  } = req.body
@@ -7,13 +9,21 @@ const Registeruser =expressErrorHander(async (req, res) =>
     {
         throw new Error("Please enter the all fields")
     }
+    // checking if email or user already exsist
+    const userExsist =await userModel.findOne({ email: myEmail })
+    if (userExsist)
+    {
+        throw new Error("Email already exists")
+    }
+    // Hash the password
+    const hashedPassword=await encrypt.hash(myPassword,10)
     //creating table 
     try {
          const createTable = await userModel.create({
         name: myName,
         phoneno: myPhoneno,
         email: myEmail,
-        password: myPassword,
+        password: hashedPassword,
         gender: myGender,
         image: myImage
        
@@ -24,6 +34,8 @@ const Registeruser =expressErrorHander(async (req, res) =>
     }
    
 })
+
+// -------------------------------------------Login User Function----------------------------------------
 module.exports = {
     Registeruser
 }
