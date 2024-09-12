@@ -36,6 +36,29 @@ const Registeruser =expressErrorHander(async (req, res) =>
 })
 
 // -------------------------------------------Login User Function----------------------------------------
+const loginUser = expressErrorHander(async (req, res) =>
+{
+    // Name and Email from user frontend
+    const { myEmail, myPassword } = req.body
+    if (!myEmail || !myPassword) 
+    {
+        throw new Error("Please enter the email and password")
+    }
+    const finduser = await userModel.findOne({ email: myEmail})
+    if (!finduser)
+    {
+        throw new Error("Invalid Email")
+    }
+    if (finduser && await encrypt.compare(myPassword, finduser.password))
+    {
+        res.send(finduser)
+    }
+    else
+    {
+         throw new Error("Invalid password")
+        }
+})
 module.exports = {
-    Registeruser
+    Registeruser,
+    loginUser
 }
