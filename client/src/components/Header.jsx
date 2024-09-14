@@ -2,27 +2,34 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/esm/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { CiSearch } from "react-icons/ci";
 
 function Header() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
+    <Navbar expand="lg" className="bg-body-tertiary ">
+      <Container >
         <Navbar.Brand href="#home">Gaari</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto d-flex align-items-center">
+        <Navbar.Toggle aria-controls="basic-navbar-nav " />
+        <Navbar.Collapse id="basic-navbar-nav ">
+          <Nav className="me-auto d-flex align-items-center mx-auto ">
             <Nav.Link href="#home">Home</Nav.Link>
             <Nav.Link href="#link">About</Nav.Link>
-                      <Nav.Link href="#link">Services</Nav.Link>
-                      <Nav.Link>
+            <Nav.Link href="#link">Products</Nav.Link>
+            <Nav.Link href="#link">Services</Nav.Link>
+            
+              
+            
+            <Nav.Link  className=' border d-flex bg-white rounded-pill align-items-center'>
+              <span className='mx-2'> <CiSearch size={'1.5rem'}  /></span>
+             
                       <form >
-            <input style={{width : "500px"}} type="text" placeholder='Lc 570' className='rounded-pill form-control p-2  col-xl-12 col-12' />
+            <input style={{width : "300px"}} type="text" placeholder='Lc 570' className='rounded-pill form-control  border-0 bg-transparent  col-xl-12 col-12' />
                       </form>
-                      </Nav.Link>
+            </Nav.Link>
+           
                   </Nav>
-                  <Nav.Link className=''>
-                      <Button className='rounded-pill px-4' >
+                   <Nav.Link >
+                      <Button className='my-3 header-btn mx-auto d-flex rounded-pill px-4' >
                           Login
                       </Button>
                   </Nav.Link>
