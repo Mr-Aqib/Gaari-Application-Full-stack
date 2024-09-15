@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Col, Container } from 'react-bootstrap'
 import { FaArrowRight } from "react-icons/fa";
+import Loginsection from './Loginsection';
 const Front = () => {
   return (
       <>
@@ -35,8 +36,8 @@ const Front = () => {
                           <p className='m-0 w-50'> Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptatem laborum optio eaque autem aut dolorem minima!</p>
                       </div>
               </Col>
-              <Col lg={6}>
-                  
+              <Col lg={6} className='p-5 Login-form rounded-4 mt-3 d-flex flex-column align-items-center '>
+                  <Loginsection/>
               </Col>
               </Row>
               </Container>

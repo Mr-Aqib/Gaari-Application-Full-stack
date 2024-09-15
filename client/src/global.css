@@ -25,3 +25,9 @@ body {
   background-position: center center;
   background-size: cover;
 }
+.Login-form {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhel5eqbNfisIoltUmH_0O3yE4eiJeIs4yl3sDgHPw2-sDjd1RdKtlH14bDJGzlwL0Tdw32RWfUpyBiDfsqHT_qx3XYYhRrDsl9YHclcpinDF2OsHlmWfNUENTXDdJyEbEgEAsXyXcEKaQ/w360-h640-rw/ford_mustang_mustang_car_212637_1080x1920.jpg);
+  background-position: center center;
+  background-size: cover;
+}
