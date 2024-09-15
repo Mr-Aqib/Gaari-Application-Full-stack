@@ -5,6 +5,9 @@ const connectDB = require('./config/connection.js')
 const app = express()
 // Require color for use
 require('colors')
+// Install cor for chrome ap req
+const cors = require('cors')
+app.use(cors())
 // Require .env
 require('dotenv').config()
 // Connect with DB
