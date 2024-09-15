@@ -3,9 +3,9 @@ import React from 'react'
 const Loginsection = () => {
   return (
       <>
-          <h4 className='text-white fw-light text-center mt-5'> Best Car collections Website</h4>
+          <h4 className='text-white fw-light text-center mt-4'> Best Car collections Website</h4>
           
-          <form className=' rounded-4 bg-white p-4 w-75'>
+          <form className=' rounded-4  p-4 w-75 login-form'>
                <h4 className='fw-light text-center text-dark'> Login to Your Account</h4>
               <div className="form-group">
                   <label htmlFor="">Username</label>
@@ -26,6 +26,7 @@ const Loginsection = () => {
               <button className="mt-3 m-auto d-flex justify-content-center btn btn-dark rounded-4 text-center w-75">
                   Login
               </button>
+             
           </form>
       </>
   )
